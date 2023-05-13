@@ -1,10 +1,10 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
-const PrimaryButton = ({ children }) => {
+const PrimaryButton = ({ children, onPress }) => {
   return (
     <View style={styles.buttonOuter}>
       <Pressable
-        onPress={() => console.log('Pressed')}
+        onPress={onPress}
         android_ripple={{
           color: '#ddb52f',
         }}
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.5,
-
   },
   buttonText: {
     color: '#ddb52f',

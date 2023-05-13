@@ -11,8 +11,7 @@ export default function App() {
     >
       <ImageBackground
         source={require('./assets/images/background.png')}
-        style={{ flex: 1,
-        }}
+        style={{ flex: 1}}
         resizeMode='cover'
         imageStyle={{ opacity: 0.8 }}
       >

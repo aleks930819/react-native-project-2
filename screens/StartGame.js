@@ -1,6 +1,7 @@
 import { View, TextInput, StyleSheet, Alert } from 'react-native';
 import { useState } from 'react';
 import PrimaryButton from '../components/PrimaryButton';
+import Colors from '../constants/colors';
 
 const StartGame = ({ onStartGame }) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -28,7 +29,7 @@ const StartGame = ({ onStartGame }) => {
   return (
     <View style={styles.inputContainer}>
       <TextInput
-        placeholderTextColor={'#ddb52f'}
+        placeholderTextColor={Colors.accent}
         style={styles.input}
         maxLength={2}
         keyboardType="number-pad"
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 100,
     marginHorizontal: 24,
-    backgroundColor: '#42060d',
+    backgroundColor: Colors.primary700,
     borderRadius: 10,
     elevation: 5,
     shadowColor: '#000',
@@ -70,9 +71,9 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     fontSize: 32,
-    borderBottomColor: '#ddb52f',
+    borderBottomColor: Colors.accent,
     borderBottomWidth: 2,
-    color: '#ddb52f',
+    color: Colors.accent,
     marginVertical: 10,
     fontWeight: 'bold',
     width: '11%',

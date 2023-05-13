@@ -8,12 +8,18 @@ const StartGame = () => {
         placeholderTextColor={'#ddb52f'}
         style={styles.input}
         maxLength={2}
-        keyboardType='number-pad'
-        autoCapitalize='none'
+        keyboardType="number-pad"
+        autoCapitalize="none"
         autoCorrect={false}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
+      <View style={styles.buttonContainer}>
+        <View style={styles.button}>
+          <PrimaryButton>Reset</PrimaryButton>
+        </View>
+        <View style={styles.button}>
+          <PrimaryButton>Confirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 };
@@ -32,6 +38,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   input: {
@@ -42,7 +50,19 @@ const styles = StyleSheet.create({
     color: '#ddb52f',
     marginVertical: 10,
     fontWeight: 'bold',
-    alignSelf: 'flex-start',
     width: '11%',
+  },
+
+  buttonContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'space-around',
+    paddingHorizontal: 15,
+    marginTop: 20,
+    marginBottom: 10,
+  },
+
+  button: {
+    flex: 1,
   },
 });

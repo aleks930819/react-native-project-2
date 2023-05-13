@@ -1,6 +1,7 @@
+import { Text } from 'react-native';
 
 const EndGame = () => {
-  return <div></div>;
+  return <Text>Game Over</Text>;
 };
 
 export default EndGame;
